@@ -8,7 +8,7 @@ export class ExchangeRateResolver {
 
     // TODO: Implement a GraphQL Query that returns the exchange rates
     @Query(() => [ExchangeRate], { name: 'exchangeRate' })
-    async GetExchangeRate() {
+    async GetExchangeRate(): Promise<ExchangeRate[]> {
         return await this.exchangeRateService.getExchangeRates();
     }
 }
