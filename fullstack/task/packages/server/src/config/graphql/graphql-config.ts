@@ -1,4 +1,5 @@
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { config } from 'dotenv';
 
 config();
@@ -15,4 +16,7 @@ export const graphqlConfig: ApolloDriverConfig = {
     debug: debug === 'true',
     playground: playground === 'true',
     introspection: introspection === 'true',
+    plugins: [
+        ApolloServerPluginLandingPageLocalDefault
+    ]
 };

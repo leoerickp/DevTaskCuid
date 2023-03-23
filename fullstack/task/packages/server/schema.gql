@@ -11,5 +11,5 @@ type ExchangeRate {
 }
 
 type Query {
-  exchangeRates: [ExchangeRate!]!
+  exchangeRate: [ExchangeRate!]!
 }

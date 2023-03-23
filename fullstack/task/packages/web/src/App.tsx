@@ -1,10 +1,17 @@
+import { TableRates } from './components/TableRates';
+import { Footer, Header } from './layouts';
+
 function App() {
     // TODO: Add the FE for exchange rates here.
 
     return (
-        <div>
-            <p>Add the exchange rates here</p>
-        </div>
+        <>
+            <Header />
+            <div className="container mt-5 mb-5">
+                <TableRates />
+            </div>
+            <Footer />
+        </>
     );
 }
 
