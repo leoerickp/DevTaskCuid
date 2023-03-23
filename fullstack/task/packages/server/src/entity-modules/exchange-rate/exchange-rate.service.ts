@@ -5,7 +5,7 @@ import { exchangeRateAPI } from '../../api/exchange-rate-api';
 @Injectable()
 export class ExchangeRateService {
 
-    public getExchangeRates = async () => {
+    public getExchangeRates = async (): Promise<ExchangeRate[]> => {
         const rates: ExchangeRate[] = [];
 
         // TODO: Implement the fetching and parsing of the exchange rates.
